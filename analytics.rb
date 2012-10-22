@@ -23,16 +23,18 @@ username = config['ganalytics']['username']
 password = config['ganalytics']['password']
 profile_id = config['ganalytics']['profile_id']
 raise "Missing required config options: username, password, profile_id" if username.nil? || password.nil? || profile_id.nil?
+puts "Fetching data for profile ID: #{profile_id}"
 
+# Login
 session = Garb::Session.login(username, password, secure: secure)
 
 # All data
-# accounts = Garb::Management::Account.all
-# properties =  Garb::Management::WebProperty.all
-# profiles = Garb::Management::Profile.all
-# goals = Garb::Management::Goal.all
+#accounts = Garb::Management::Account.all
+#properties =  Garb::Management::WebProperty.all
+#profiles = Garb::Management::Profile.all
+#goals = Garb::Management::Goal.all
 
-# Load visits and goals for a couple days
+# Load visits and goals for a sample period
 profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == profile_id }
 profile_goals = profile.goals
 report = GarbReporter::Report.new(profile)
