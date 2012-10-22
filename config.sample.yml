@@ -1,0 +1,7 @@
+ganalytics:
+  username: you@gmail.com
+  password: passwerd
+  profile_id: UA-xxxxxxxx-x
+twitter:
+  username: foobar
+  password: bazbuzz

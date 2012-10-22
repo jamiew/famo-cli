@@ -1,3 +1,5 @@
 .bundle
 .DS_Store
 .gems
+cacert.pem
+config.yml
