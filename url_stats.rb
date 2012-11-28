@@ -29,4 +29,4 @@ url_without_protocol = url_with_protocol.gsub(/^https?\:\/\//,'')
 res = `curl -s -d"data[url]=#{url_without_protocol}" http://www.likeexplorer.com/ajax/get_social_analytics`
 json = MultiJson.load(res)
 analytics = json && json['analytics']
-puts analytics
+puts MultiJson.decode(analytics)
