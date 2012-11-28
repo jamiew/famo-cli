@@ -29,4 +29,5 @@ PLATFORMS
 DEPENDENCIES
   garb!
   garb-reporter
+  multi_json
   twitter
