@@ -30,5 +30,3 @@ res = `curl -s -d"data[url]=#{url_without_protocol}" http://www.likeexplorer.com
 json = MultiJson.load(res)
 analytics = json && json['analytics']
 puts analytics
-
-
