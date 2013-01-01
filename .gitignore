@@ -3,3 +3,5 @@
 .gems
 cacert.pem
 config.yml
+stats/
+urls.yml
