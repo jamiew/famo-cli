@@ -4,4 +4,5 @@
 cacert.pem
 config.yml
 stats/
+sync_stats.sh
 urls.yml
